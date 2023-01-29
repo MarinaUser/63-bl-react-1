@@ -11,13 +11,13 @@ const icons = [
   <GiTreeDoor />,
 ];
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ id, title, stats }) => {
   return (
     <>
       {title && <StatisticTitle>{title}</StatisticTitle>}
       <StatisticsList>
         {stats.map((stat, index) => (
-          <StatisticItem stat={stat} icon={icons[index]} />
+          <StatisticItem key={id} stat={stat} icon={icons[index]} />
         ))}
       </StatisticsList>
     </>
